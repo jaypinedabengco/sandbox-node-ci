@@ -1,0 +1,12 @@
+version: 2
+jobs: 
+  build: 
+    docker: 
+      - image: circleci/node:6.10.3
+    steps: 
+      - checkout
+      - run: 
+          name: Update and Run
+          command: |
+            npm install 
+            npm start
